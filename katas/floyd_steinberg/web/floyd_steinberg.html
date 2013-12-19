@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Floyd steinberg</title>
+    <link rel="stylesheet" href="floyd_steinberg.css">
+  </head>
+    <body>
+      Number of values per color component: <input id="depth" type="number" min="2" max="256" value="4"/><br/>
+      Apply dithering: <input type="checkbox" id="dither" checked="true">
+      <hr/>
+      <img id="david" src="michelangelo_david_head.jpg"/>
+      <canvas id="canvas"/>
+    
+    <script type="application/dart" src="floyd_steinberg.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

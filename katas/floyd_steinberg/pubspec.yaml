@@ -1,0 +1,4 @@
+name: floyd_steinberg
+description: A demo of Floyd Steinberg dithering technique
+dependencies:
+  browser: any
