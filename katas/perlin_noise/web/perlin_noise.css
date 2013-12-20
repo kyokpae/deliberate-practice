@@ -1,5 +1,10 @@
 body {
-  background-color: #AAA;
+  background-color: #00F;
   margin: 0px;
   overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  bottom: 0px;
 }
