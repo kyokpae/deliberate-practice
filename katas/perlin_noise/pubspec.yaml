@@ -1,0 +1,4 @@
+name: perlin_nose
+description: Perlin noise
+dependencies:
+  browser: any
