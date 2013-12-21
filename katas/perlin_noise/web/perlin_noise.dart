@@ -43,12 +43,12 @@ void animate(double frame) {
   for (int y = 0; y < height; y++) {  
     for (int x = 0; x < width; x++) {
       double value = noise3d(x + dx, y, dz);
-      int color = (y.toDouble() * 2 - 768 + value * 256.0).toInt();
+      int color = y ~/ 2 -192 + (value * 256.0).toInt() + 128;
       
-      pixels[offset] = color;
-      pixels[offset + 1] = color ~/2 + 128;
+      pixels[offset] = 255;
+      pixels[offset + 1] = 255;
       pixels[offset + 2] = 255;
-      pixels[offset + 3] = 255;
+      pixels[offset + 3] = color;
       offset += 4;
     }
   }
@@ -59,10 +59,10 @@ void animate(double frame) {
 
 double noise3d(int x, int y, int z) {
   double value = 0.0;
-  int grid = 128;
+  int grid = 256;
   double factor = 1.0;
   double dimnish = 0.45;
-  while (grid >= 16 && factor > 0.01) {    
+  while (grid >= 2 && factor > 0.01) {    
     int gridX = x ~/ grid;
     int gridY = y ~/ grid;
     int gridZ = z ~/ grid;
